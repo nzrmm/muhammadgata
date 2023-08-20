@@ -1,7 +1,7 @@
 import cx from "classnames";
 
 import { NavbarItem } from "@/components";
-import { ROUTES } from "@/constant";
+import { ROUTES } from "@/constants";
 
 const Header = () => {
   return (
