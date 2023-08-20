@@ -12,7 +12,8 @@ const NavbarItem = ({ href, name }: INavbarLink) => {
     <CustomLink
       href={href}
       customClassName={cx("px-6 py-1.5 rounded-md hover:bg-neutral-100", {
-        "bg-neutral-100": asPath === href,
+        "font-semibold bg-neutral-100 text-neutral-900": asPath === href,
+        "text-neutral-700": asPath !== href,
       })}
     >
       {name}
