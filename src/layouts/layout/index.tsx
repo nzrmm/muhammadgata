@@ -2,6 +2,8 @@ import React from "react";
 import cx from "classnames";
 import { Space_Grotesk, Inter } from "next/font/google";
 
+import { Header } from "@/layouts";
+
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   preload: true,
@@ -25,6 +27,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
         "font-primary antialiased"
       )}
     >
+      <Header />
       <main className={cx("mx-auto lg:max-w-4xl")}>{children}</main>
     </div>
   );
