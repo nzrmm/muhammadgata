@@ -28,7 +28,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
       )}
     >
       <Header />
-      <main className={cx("mx-auto lg:max-w-4xl")}>{children}</main>
+      <main className={cx("mx-auto lg:max-w-5xl")}>{children}</main>
     </div>
   );
 };
