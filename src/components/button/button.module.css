@@ -1,0 +1,11 @@
+.variant__small {
+  @apply px-6 py-2 text-base font-medium rounded-full;
+}
+
+.type__primary {
+  @apply bg-neutral-900 text-neutral-100 hover:bg-neutral-800;
+}
+
+.type__secondary {
+  @apply bg-neutral-200 text-neutral-900 hover:bg-neutral-300;
+}
