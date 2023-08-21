@@ -1,26 +1,29 @@
 import React from "react";
 import cx from "classnames";
 
-import styles from "./button.module.css";
-
 type IButton = React.PropsWithChildren<{
   id: string;
-  type: "primary" | "secondary";
-  variant: "small";
+  size: "small";
+  variant: "primary";
   customClassName?: string;
   onClick?: () => void;
 }>;
 
-const Button = ({ id, children, type, variant, ...props }: IButton) => {
+const Button = ({ id, children, size, variant, ...props }: IButton) => {
+  const sizeClass = {
+    small: "px-6 py-2 text-base font-medium rounded-full",
+  }[size];
+
+  const variantClass = {
+    primary:
+      "bg-neutral-900 text-white hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 hover:dark:bg-neutral-200",
+  }[variant];
+
   return (
     <div>
       <button
         id={id}
-        className={cx(
-          styles[`type__${type}`],
-          styles[`variant__${variant}`],
-          props.customClassName
-        )}
+        className={cx(sizeClass, variantClass, props.customClassName)}
         onClick={props.onClick}
       >
         {children}
