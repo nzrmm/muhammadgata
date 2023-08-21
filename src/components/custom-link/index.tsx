@@ -6,9 +6,14 @@ type ICustomLink = React.PropsWithChildren<{
 }> &
   LinkProps;
 
-const CustomLink = ({ href, children, ...props }: ICustomLink) => {
+const CustomLink = ({
+  href,
+  children,
+  customClassName,
+  ...props
+}: ICustomLink) => {
   return (
-    <Link href={href} className={props.customClassName} {...props}>
+    <Link href={href} className={customClassName} {...props}>
       {children}
     </Link>
   );
