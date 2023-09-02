@@ -1,34 +1,42 @@
-import React from "react";
-import cx from "classnames";
+import { ComponentProps } from "react";
+import { cn } from "@/utils";
+import { cva, type VariantProps } from "class-variance-authority";
 
-type IButton = React.PropsWithChildren<{
-  id: string;
-  size: "small";
-  variant: "primary";
-  customClassName?: string;
-  onClick?: () => void;
-}>;
+const buttonVariants = cva("font-medium rounded-full", {
+  variants: {
+    size: {
+      sm: "px-6 py-2 text-base",
+    },
+    variant: {
+      primary: [
+        "bg-neutral-900 text-white hover:bg-neutral-800",
+        "dark:bg-white dark:text-neutral-900 hover:dark:bg-neutral-200",
+      ],
+    },
+  },
+  defaultVariants: {
+    size: "sm",
+    variant: "primary",
+  },
+});
 
-const Button = ({ id, children, size, variant, ...props }: IButton) => {
-  const sizeClass = {
-    small: "px-6 py-2 text-base font-medium rounded-full",
-  }[size];
+type IButtonProps = ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants>;
 
-  const variantClass = {
-    primary:
-      "bg-neutral-900 text-white hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 hover:dark:bg-neutral-200",
-  }[variant];
-
+const Button = ({
+  size,
+  variant,
+  className,
+  children,
+  ...props
+}: IButtonProps) => {
   return (
-    <div>
-      <button
-        id={id}
-        className={cx(sizeClass, variantClass, props.customClassName)}
-        onClick={props.onClick}
-      >
-        {children}
-      </button>
-    </div>
+    <button
+      className={cn(buttonVariants({ size, variant, className }))}
+      {...props}
+    >
+      {children}
+    </button>
   );
 };
 
