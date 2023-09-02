@@ -1,17 +1,17 @@
 import React from "react";
-import cx from "classnames";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { CustomLink } from "@/components";
+import { cn } from "@/utils";
 import { INavbarLink } from "@/types";
 
 const NavbarItem = ({ href, name }: INavbarLink) => {
   const { asPath } = useRouter();
 
   return (
-    <CustomLink
+    <Link
       href={href}
-      customClassName={cx(
+      className={cn(
         "px-6 py-1.5 rounded-md hover:bg-neutral-100 hover:dark:bg-neutral-800",
         {
           "font-semibold bg-neutral-100 text-neutral-900 dark:bg-neutral-800 dark:text-white":
@@ -21,7 +21,7 @@ const NavbarItem = ({ href, name }: INavbarLink) => {
       )}
     >
       {name}
-    </CustomLink>
+    </Link>
   );
 };
 
