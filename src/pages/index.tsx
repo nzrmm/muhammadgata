@@ -1,18 +1,17 @@
-import cx from "classnames";
-
 import { Button, Typography } from "@/components";
 import { MEDIA_SOCIALS } from "@/constants";
+import { cn } from "@/utils";
 
 const Home = () => {
   return (
-    <div className={cx("pt-40 pb-32")}>
-      <div className={cx("mb-20")}>
-        <Typography variant="text6Xl" customClassName="mb-16">
+    <div className={cn("pt-40 pb-32")}>
+      <div className={cn("mb-20")}>
+        <Typography variant="text6Xl" className={cn("mb-16")}>
           A Frontend and Mobile Developer with passion for creating beautiful
           user interfaces and satisfying user experiences.
         </Typography>
 
-        <div className={cx("flex flex-col gap-8 mb-16")}>
+        <div className={cn("flex flex-col gap-8 mb-16")}>
           <Typography variant="textLg">
             Hello 👋, i&apos;m Muhammad Gata. I was born in Malang East Java,
             but i spent time living in Mojokerto East Java. I have good skill in
@@ -42,20 +41,20 @@ const Home = () => {
           </Typography>
         </div>
 
-        <div className={cx("flex items-center gap-8")}>
-          <div className={cx("flex items-center gap-3")}>
+        <div className={cn("flex items-center gap-8")}>
+          <div className={cn("flex items-center gap-3")}>
             {MEDIA_SOCIALS.map((item, index) => {
               return (
                 <a
                   key={index}
                   href={item.href}
                   target="_blank"
-                  className={cx(
+                  className={cn(
                     "w-10 h-10 flex justify-center items-center rounded-md",
                     "hover:bg-neutral-100"
                   )}
                 >
-                  <item.icon size={24} className={cx("fill-neutral-700")} />
+                  <item.icon size={24} className={cn("fill-neutral-700")} />
                 </a>
               );
             })}
