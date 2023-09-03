@@ -6,6 +6,7 @@ export type INavbarLink = {
 };
 
 export type IMediaSocial = {
+  name: string;
   href: string;
   icon: IconType;
 };

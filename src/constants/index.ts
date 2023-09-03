@@ -18,10 +18,19 @@ export const ROUTES: INavbarLink[] = [
 ];
 
 export const MEDIA_SOCIALS: IMediaSocial[] = [
-  { href: "https://github.com/nzrmm", icon: BsGithub },
-  { href: "https://www.linkedin.com/in/muhammad-gata/", icon: BsLinkedin },
-  { href: "https://www.instagram.com/_nzrmm/", icon: BsInstagram },
+  { name: "Github", href: "https://github.com/nzrmm", icon: BsGithub },
   {
+    name: "Linkedin",
+    href: "https://www.linkedin.com/in/muhammad-gata/",
+    icon: BsLinkedin,
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/_nzrmm/",
+    icon: BsInstagram,
+  },
+  {
+    name: "Facebook",
     href: "https://web.facebook.com/profile.php?id=100010330266856",
     icon: BsFacebook,
   },

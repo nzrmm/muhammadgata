@@ -49,6 +49,7 @@ const Home = () => {
                   key={index}
                   href={item.href}
                   target="_blank"
+                  aria-label={item.name}
                   className={cn(
                     "w-10 h-10 flex justify-center items-center rounded-md",
                     "hover:bg-neutral-100"
