@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import { Button, Typography } from "@/components";
 import { MEDIA_SOCIALS } from "@/constants";
 import { cn } from "@/utils";
@@ -5,6 +7,14 @@ import { cn } from "@/utils";
 const Home = () => {
   return (
     <div className={cn("pt-40 pb-32")}>
+      <Head>
+        <title>Muhammad Gata - Frontend and Mobile Developer</title>
+        <meta
+          name="description"
+          content="Hello, I am Muhammad Gata. I am a Frontend and Mobile Developer with passion for creating beautiful user interfaces and satisfying user experiences."
+        />
+      </Head>
+
       <div className={cn("mb-20")}>
         <Typography variant="text6Xl" className={cn("mb-16")}>
           A Frontend and Mobile Developer with passion for creating beautiful
