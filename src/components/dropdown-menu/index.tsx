@@ -1,22 +1,26 @@
 import { Fragment } from "react";
-import cx from "classnames";
 import { Menu, Transition } from "@headlessui/react";
 
-type IDropdownMenu = {
+import { cn } from "@/utils";
+
+type IDropdownMenuProps = {
+  buttonTitle: string;
   renderIcon: () => React.ReactNode;
   renderItems: (menu: typeof Menu) => React.ReactNode;
 };
 
-const DropdownMenu = ({ renderIcon, renderItems }: IDropdownMenu) => {
+const DropdownMenu = ({ buttonTitle, ...props }: IDropdownMenuProps) => {
   return (
-    <Menu as="div" className={cx("relative z-40")}>
+    <Menu as="div" className={cn("relative z-40")}>
       <Menu.Button
-        className={cx(
+        as="button"
+        title={buttonTitle}
+        className={cn(
           "inline-flex justify-center items-center",
           "h-8 w-8 rounded-md hover:bg-neutral-100 hover:dark:bg-neutral-800"
         )}
       >
-        {() => <>{renderIcon()}</>}
+        {() => <>{props.renderIcon()}</>}
       </Menu.Button>
 
       <Transition
@@ -29,13 +33,13 @@ const DropdownMenu = ({ renderIcon, renderItems }: IDropdownMenu) => {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items
-          className={cx(
+          className={cn(
             "absolute right-0 shadow-lg rounded-md divide-y w-40 mt-2",
             "bg-white divide-neutral-200",
             "dark:bg-neutral-900 dark:divide-neutral-800"
           )}
         >
-          {() => <>{renderItems(Menu)}</>}
+          {() => <>{props.renderItems(Menu)}</>}
         </Menu.Items>
       </Transition>
     </Menu>
