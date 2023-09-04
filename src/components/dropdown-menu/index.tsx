@@ -16,8 +16,8 @@ const DropdownMenu = ({ buttonTitle, ...props }: IDropdownMenuProps) => {
         as="button"
         title={buttonTitle}
         className={cn(
-          "inline-flex justify-center items-center",
-          "h-8 w-8 rounded-md hover:bg-neutral-100 hover:dark:bg-neutral-800"
+          "inline-flex justify-center items-center h-8 w-8 rounded-md hover:bg-neutral-100",
+          "hover:dark:bg-neutral-800"
         )}
       >
         {() => <>{props.renderIcon()}</>}
@@ -34,9 +34,9 @@ const DropdownMenu = ({ buttonTitle, ...props }: IDropdownMenuProps) => {
       >
         <Menu.Items
           className={cn(
-            "absolute right-0 shadow-lg rounded-md divide-y w-40 mt-2",
-            "bg-white divide-neutral-200",
-            "dark:bg-neutral-900 dark:divide-neutral-800"
+            "absolute right-0 shadow-lg rounded-md divide-y w-40 bottom-full bg-white divide-neutral-200 mt-2",
+            "dark:bg-neutral-900 dark:divide-neutral-800",
+            "lg:bottom-auto"
           )}
         >
           {() => <>{props.renderItems(Menu)}</>}

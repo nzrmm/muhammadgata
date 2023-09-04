@@ -6,7 +6,7 @@ import { cn } from "@/utils";
 
 const Home = () => {
   return (
-    <div className={cn("pt-40 pb-32")}>
+    <div>
       <Head>
         <title>Muhammad Gata - Frontend and Mobile Developer</title>
         <meta
@@ -16,12 +16,12 @@ const Home = () => {
       </Head>
 
       <div className={cn("mb-20")}>
-        <Typography variant="text6Xl" className={cn("mb-16")}>
+        <Typography variant="text6Xl" className={cn("mb-10", "lg:mb-16")}>
           A Frontend and Mobile Developer with passion for creating beautiful
           user interfaces and satisfying user experiences.
         </Typography>
 
-        <div className={cn("flex flex-col gap-8 mb-16")}>
+        <div className={cn("flex flex-col gap-6 mb-10", "lg:gap-8 lg:mb-16")}>
           <Typography variant="textLg">
             Hello 👋, i&apos;m Muhammad Gata. I was born in Malang East Java,
             but i spent time living in Mojokerto East Java. I have good skill in
@@ -51,7 +51,9 @@ const Home = () => {
           </Typography>
         </div>
 
-        <div className={cn("flex items-center gap-8")}>
+        <div
+          className={cn("flex flex-col gap-8", "lg:flex-row lg:items-center")}
+        >
           <div className={cn("flex items-center gap-3")}>
             {MEDIA_SOCIALS.map((item, index) => {
               return (
@@ -61,11 +63,14 @@ const Home = () => {
                   target="_blank"
                   aria-label={item.name}
                   className={cn(
-                    "w-10 h-10 flex justify-center items-center rounded-md",
-                    "hover:bg-neutral-100"
+                    "w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-100",
+                    "hover:dark:bg-neutral-800"
                   )}
                 >
-                  <item.icon size={24} className={cn("fill-neutral-700")} />
+                  <item.icon
+                    size={24}
+                    className={cn("fill-neutral-700", "dark:fill-neutral-100")}
+                  />
                 </a>
               );
             })}

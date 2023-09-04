@@ -21,11 +21,12 @@ const NavbarItem = ({ href, name, ...props }: INavbarItemProps) => {
     <Link
       href={href}
       className={cn(
-        "px-6 py-1.5 rounded-md",
-        "text-neutral-700 hover:bg-neutral-100",
-        "dark:text-neutral-300 hover:dark:bg-neutral-800 ",
+        "text-neutral-700",
+        "dark:text-neutral-300",
+        "lg:px-6 lg:py-1.5 lg:rounded-md lg:hover:bg-neutral-100",
+        "lg:hover:dark:bg-neutral-800",
         {
-          "font-semibold bg-neutral-100 text-neutral-900 dark:bg-neutral-800 dark:text-white":
+          "font-semibold text-neutral-900 dark:text-white lg:bg-neutral-100 lg:dark:bg-neutral-800":
             isActive(),
         }
       )}
