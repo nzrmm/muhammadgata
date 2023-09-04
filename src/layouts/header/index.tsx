@@ -1,26 +1,23 @@
-import cx from "classnames";
-
 import { NavbarItem, ThemeSelector } from "@/components";
 import { ROUTES } from "@/constants";
+import { cn } from "@/utils";
 
 const Header = () => {
   return (
     <div
-      className={cx(
-        "fixed top-0 w-full bg-white border-b border-b-neutral-200 z-50",
-        "dark:bg-neutral-900 dark:border-b-neutral-800"
+      className={cn(
+        "fixed top-0 w-full bg-white/60 border-b border-b-neutral-200 backdrop-blur-xl z-50",
+        "dark:bg-neutral-900/80 dark:border-b-neutral-800"
       )}
     >
-      <nav className={cx("flex justify-between items-center h-16 px-6")}>
+      <nav className={cn("flex justify-between items-center h-16 px-6")}>
         <div></div>
 
-        <div className={cx("flex items-center gap-10")}>
-          <div className={cx("flex items-center gap-1")}>
-            {ROUTES.map((item, index) => {
-              return (
-                <NavbarItem key={index} href={item.href} name={item.name} />
-              );
-            })}
+        <div className={cn("flex items-center gap-10")}>
+          <div className={cn("flex items-center gap-1")}>
+            {ROUTES.map((item, index) => (
+              <NavbarItem key={index} href={item.href} name={item.name} />
+            ))}
           </div>
 
           <ThemeSelector />
