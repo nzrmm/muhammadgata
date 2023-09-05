@@ -13,6 +13,8 @@ const typographyVariants = cva("text-neutral-900 dark:text-white", {
         "text-lg font-normal leading-loose tracking-wider",
         "text-neutral-700 dark:text-neutral-400",
       ],
+      textXl: "text-xl font-bold leading-tight tracking-wide",
+      text3Xl: "text-3xl font-bold leading-tight tracking-wide",
       text4Xl: "text-4xl  font-bold leading-tight tracking-wide",
       text6Xl: "text-6xl font-bold leading-tight tracking-wide",
     },
