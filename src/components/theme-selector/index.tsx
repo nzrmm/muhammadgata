@@ -1,7 +1,7 @@
 import { BiLoader } from "react-icons/bi";
 
 import { DropdownMenu } from "@/components";
-import { THEMES, THEME_ICON } from "@/constants";
+import { THEMES, THEME_ICON } from "@/constants/theme";
 import { cn } from "@/utils";
 import { useTheme } from "@/hooks";
 

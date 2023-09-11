@@ -5,7 +5,7 @@ import { RxArrowTopRight } from "react-icons/rx";
 import { Button, Typography } from "@/components";
 import { useScreenDetector } from "@/hooks";
 import { cn } from "@/utils";
-import { IProjectType } from "@/types/data";
+import { IProjectType } from "@/types/project";
 
 type IProjectCardProps = {
   isReverse?: boolean;

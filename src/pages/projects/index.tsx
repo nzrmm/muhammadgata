@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Typography, ProjectCard } from "@/components";
 import { useScreenDetector } from "@/hooks";
 import { cn } from "@/utils";
-import { projects } from "@/data";
+import { projects } from "@/data/projects";
 
 const Projects = () => {
   const { isMobile, isTablet } = useScreenDetector();

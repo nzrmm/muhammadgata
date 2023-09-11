@@ -1,9 +1,9 @@
 import Head from "next/head";
 
 import { Button, Typography } from "@/components";
-import { MEDIA_SOCIALS } from "@/constants";
 import { useScreenDetector } from "@/hooks";
 import { cn } from "@/utils";
+import { media_socials } from "@/data/media-socials";
 
 const Home = () => {
   const { isMobile, isTablet } = useScreenDetector();
@@ -61,7 +61,7 @@ const Home = () => {
           className={cn("flex flex-col gap-8", "lg:flex-row lg:items-center")}
         >
           <div className={cn("flex items-center gap-3")}>
-            {MEDIA_SOCIALS.map((item, index) => {
+            {media_socials.map((item, index) => {
               return (
                 <a
                   key={index}

@@ -3,9 +3,9 @@ import Link, { type LinkProps } from "next/link";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/utils";
-import { INavbarLink } from "@/types";
+import { IRouteType } from "@/constants/route";
 
-type INavbarItemProps = LinkProps & INavbarLink;
+type INavbarItemProps = LinkProps & IRouteType;
 
 const NavbarItem = ({ href, name, ...props }: INavbarItemProps) => {
   const pathname = usePathname();
