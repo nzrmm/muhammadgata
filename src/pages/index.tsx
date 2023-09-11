@@ -32,7 +32,7 @@ const Home = () => {
             Hello 👋, i&apos;m Muhammad Gata. I was born in Malang East Java,
             but i spent time living in Mojokerto East Java. I have good skill in
             Frontend and Mobile Development. Now, i focused how to make
-            beautifull user interfaces and satisfying user experiences to
+            beautiful user interfaces and satisfying user experiences to
             increase user enjoyment.
           </Typography>
 

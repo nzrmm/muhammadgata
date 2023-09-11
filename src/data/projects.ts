@@ -23,7 +23,7 @@ export const projects: IProjectType[] = [
   {
     name: "GPT 3 Slicing",
     description:
-      "Free design landing page from arshakir.com which contain very beautifull and colorfull UI, Build with Bootstrap 5 and Sass.",
+      "Free design landing page from arshakir.com which contain very beautiful and colorfull UI, Build with Bootstrap 5 and Sass.",
     image_url:
       "https://muhammad-gata.vercel.app/images/projects/project-3.webp",
     live_site_url: "https://gpt3-slicing.vercel.app/",
