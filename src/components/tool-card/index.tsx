@@ -8,11 +8,13 @@ const ToolCard = ({ name, description }: IToolsCardProps) => {
   return (
     <div
       className={cn(
-        "w-full h-80 bg-white border border-neutral-900/10 rounded-lg",
-        "dark:border-white/10"
+        "w-full h-80 bg-white border border-neutral-900/10 rounded-lg overflow-hidden",
+        "dark:bg-neutral-900 dark:border-white/10"
       )}
     >
-      <div className={cn("w-full h-40 bg-neutral-100")}></div>
+      <div
+        className={cn("w-full h-40 bg-neutral-100", "dark:bg-neutral-800")}
+      ></div>
       <div className={cn("p-5")}>
         <Typography
           variant="textBase"
