@@ -9,23 +9,23 @@ const Tools = () => {
   const { isMobile, isTablet } = useScreenDetector();
 
   return (
-    <div>
+    <>
       <Head>
         <title>Tools - Muhammad Gata</title>
         <meta name="description" content="a collection of tools that i use" />
       </Head>
 
       <div className={cn("mb-20")}>
-        <div className={cn("mb-16", "lg:mb-20")}>
+        <div className={cn("mb-12", "lg:mb-14")}>
           <Typography
-            variant={isMobile || isTablet ? "text4Xl" : "text6Xl"}
+            variant={isMobile || isTablet ? "text4Xl" : "text5Xl"}
             className={cn("mb-4", "lg:mb-4")}
           >
             Tools
           </Typography>
 
           <Typography variant={isMobile || isTablet ? "textBase" : "textLg"}>
-            The tools that i used in everyday.
+            The tech stacks and applications that i used in my daily work.
           </Typography>
         </div>
 
@@ -33,7 +33,7 @@ const Tools = () => {
           <div>
             <Typography
               variant={isMobile || isTablet ? "textXl" : "text3Xl"}
-              className={cn("mb-2", "lg:mb-2")}
+              className={cn("mb-4", "lg:mb-4")}
             >
               Tech Stack
             </Typography>
@@ -50,7 +50,7 @@ const Tools = () => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

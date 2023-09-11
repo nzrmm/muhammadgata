@@ -9,7 +9,7 @@ const Projects = () => {
   const { isMobile, isTablet } = useScreenDetector();
 
   return (
-    <div>
+    <>
       <Head>
         <title>Projects - Muhammad Gata</title>
         <meta
@@ -19,9 +19,9 @@ const Projects = () => {
       </Head>
 
       <div className={cn("mb-20")}>
-        <div className={cn("mb-16", "lg:mb-20")}>
+        <div className={cn("mb-12", "lg:mb-14")}>
           <Typography
-            variant={isMobile || isTablet ? "text4Xl" : "text6Xl"}
+            variant={isMobile || isTablet ? "text4Xl" : "text5Xl"}
             className={cn("mb-4", "lg:mb-4")}
           >
             Projects
@@ -36,11 +36,11 @@ const Projects = () => {
 
         <div className={cn("grid gap-8", "lg:gap-16")}>
           {projects.map((project, index) => (
-            <ProjectCard key={index} isReverse={index % 2 === 0} {...project} />
+            <ProjectCard key={index} isReverse={index % 2 !== 0} {...project} />
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -3,13 +3,13 @@ import Head from "next/head";
 import { Button, Typography } from "@/components";
 import { useScreenDetector } from "@/hooks";
 import { cn } from "@/utils";
-import { media_socials } from "@/data/media-socials";
+import { mediaSocials } from "@/data/media-socials";
 
 const Home = () => {
   const { isMobile, isTablet } = useScreenDetector();
 
   return (
-    <div>
+    <>
       <Head>
         <title>Muhammad Gata - Frontend and Mobile Developer</title>
         <meta
@@ -20,7 +20,7 @@ const Home = () => {
 
       <div className={cn("mb-20")}>
         <Typography
-          variant={isMobile || isTablet ? "text4Xl" : "text6Xl"}
+          variant={isMobile || isTablet ? "text4Xl" : "text5Xl"}
           className={cn("mb-10", "lg:mb-16")}
         >
           A Frontend and Mobile Developer with passion for creating beautiful
@@ -61,19 +61,19 @@ const Home = () => {
           className={cn("flex flex-col gap-8", "lg:flex-row lg:items-center")}
         >
           <div className={cn("flex items-center gap-3")}>
-            {media_socials.map((item, index) => {
+            {mediaSocials.map((mediaSocial, index) => {
               return (
                 <a
                   key={index}
-                  href={item.href}
+                  href={mediaSocial.href}
                   target="_blank"
-                  aria-label={item.name}
+                  aria-label={mediaSocial.name}
                   className={cn(
                     "w-10 h-10 flex justify-center items-center rounded-md hover:bg-neutral-100",
                     "hover:dark:bg-neutral-800"
                   )}
                 >
-                  <item.icon
+                  <mediaSocial.icon
                     size={24}
                     className={cn("fill-neutral-700", "dark:fill-neutral-100")}
                   />
@@ -89,7 +89,7 @@ const Home = () => {
           </a>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

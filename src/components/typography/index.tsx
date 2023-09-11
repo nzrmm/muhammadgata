@@ -20,7 +20,7 @@ const typographyVariants = cva("text-neutral-900 dark:text-white", {
       textXl: "text-xl font-bold leading-tight tracking-wide",
       text3Xl: "text-3xl font-bold leading-tight tracking-wide",
       text4Xl: "text-4xl  font-bold leading-tight tracking-wide",
-      text6Xl: "text-6xl font-bold leading-tight tracking-wide",
+      text5Xl: "text-5xl font-bold leading-tight tracking-wide",
     },
   },
   defaultVariants: {

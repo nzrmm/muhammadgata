@@ -1,7 +1,7 @@
 import { BsGithub, BsLinkedin, BsFacebook, BsInstagram } from "react-icons/bs";
 import { IMediaSocialType } from "@/types/media-social";
 
-export const media_socials: IMediaSocialType[] = [
+export const mediaSocials: IMediaSocialType[] = [
   {
     name: "Github",
     href: "https://github.com/nzrmm",
