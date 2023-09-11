@@ -82,11 +82,13 @@ const Home = () => {
             })}
           </div>
 
-          <a href="mailto:iamgata.me@gmail.com">
-            <Button id="email-me-button" size="sm" variant="primary">
-              Email me
-            </Button>
-          </a>
+          <div>
+            <a href="mailto:iamgata.me@gmail.com">
+              <Button id="email-me-button" size="sm" variant="primary">
+                Email me
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </>
