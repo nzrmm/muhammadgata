@@ -44,7 +44,7 @@ const Tools = () => {
           </div>
         </div>
 
-        <div className={cn("grid grid-cols-3 gap-5")}>
+        <div className={cn("grid gap-5", "lg:grid-cols-3")}>
           {techStacks.map((techStack, index) => (
             <ToolCard key={index} {...techStack} />
           ))}
