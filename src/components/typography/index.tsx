@@ -5,6 +5,10 @@ import { cva, type VariantProps } from "class-variance-authority";
 const typographyVariants = cva("text-neutral-900 dark:text-white", {
   variants: {
     variant: {
+      textSm: [
+        "text-sm font-normal leading-relaxed tracking-wider",
+        "text-neutral-700 dark:text-neutral-400",
+      ],
       textBase: [
         "text-base font-normal leading-loose tracking-wider",
         "text-neutral-700 dark:text-neutral-400",
