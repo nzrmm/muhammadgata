@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export type IToolType = {
   name: string;
   description: string;
-  image_url: string;
+  icon: any;
+  icon_color: any;
 };

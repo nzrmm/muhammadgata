@@ -4,7 +4,9 @@ import { IToolType } from "@/types/tool";
 
 type IToolsCardProps = IToolType;
 
-const ToolCard = ({ name, description }: IToolsCardProps) => {
+const ToolCard = ({ name, description, icon, icon_color }: IToolsCardProps) => {
+  const Icon = icon;
+
   return (
     <div
       className={cn(
@@ -13,8 +15,14 @@ const ToolCard = ({ name, description }: IToolsCardProps) => {
       )}
     >
       <div
-        className={cn("w-full h-40 bg-neutral-100", "dark:bg-neutral-800")}
-      ></div>
+        className={cn(
+          "w-full h-40 bg-neutral-100 flex items-center justify-center",
+          "dark:bg-neutral-800"
+        )}
+      >
+        <Icon color={icon_color} size={70} />
+      </div>
+
       <div className={cn("p-5")}>
         <Typography
           variant="textBase"
