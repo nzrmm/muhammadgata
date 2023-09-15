@@ -35,14 +35,14 @@ export const techStacks: IToolType[] = [
   {
     name: "React Js",
     description:
-      "My favorite library for web and native user interfaces. Simple and elegant",
+      "My favorite library for web and native user interfaces. Simple and elegant.",
     icon: SiReact,
     icon_color: "#61DAFB",
   },
   {
     name: "Next Js",
     description:
-      "My favorite React Framework to build a website. Support SSR and SEO friendly",
+      "My favorite React Framework to build a website. Support SSR and SEO friendly.",
     icon: SiNextdotjs,
     icon_color: "#000000",
   },
