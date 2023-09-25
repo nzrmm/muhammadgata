@@ -4,7 +4,7 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import { Space_Grotesk, Inter } from "next/font/google";
 
-import { Layout } from "@/layouts";
+import { MainLayout } from "@/layouts";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -44,9 +44,9 @@ export default function App({ Component, pageProps }: AppProps) {
       `}</style>
 
       <ThemeProvider enableSystem attribute="class" storageKey="app-theme">
-        <Layout>
+        <MainLayout>
           <Component {...pageProps} />
-        </Layout>
+        </MainLayout>
       </ThemeProvider>
     </>
   );

@@ -3,7 +3,7 @@ import React from "react";
 import { Header } from "@/layouts";
 import { cn } from "@/utils";
 
-const Layout = ({ children }: React.PropsWithChildren) => {
+const MainLayout = ({ children }: React.PropsWithChildren) => {
   return (
     <div className={cn("antialiased")}>
       <Header />
@@ -14,4 +14,4 @@ const Layout = ({ children }: React.PropsWithChildren) => {
   );
 };
 
-export default Layout;
+export default MainLayout;
