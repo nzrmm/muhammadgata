@@ -2,23 +2,9 @@ import "@/styles/globals.css";
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
-import { Space_Grotesk, Inter } from "next/font/google";
 
 import { MainLayout } from "@/layouts";
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  preload: true,
-  display: "swap",
-  variable: "--font-space-grotesk",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  preload: true,
-  display: "swap",
-  variable: "--font-inter",
-});
+import { spaceGrotesk, inter } from "@/constants/font";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
