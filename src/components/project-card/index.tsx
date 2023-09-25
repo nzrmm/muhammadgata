@@ -2,8 +2,7 @@ import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
 import { RxArrowTopRight } from "react-icons/rx";
 
-import { Button, Typography } from "@/components";
-import { useScreenDetector } from "@/hooks";
+import { Button } from "@/components";
 import { cn } from "@/utils";
 import { IProjectType } from "@/types/project";
 
@@ -12,8 +11,6 @@ type IProjectCardProps = {
 } & IProjectType;
 
 const ProjectCard = ({ name, description, ...props }: IProjectCardProps) => {
-  const { isMobile, isTablet } = useScreenDetector();
-
   return (
     <div
       className={cn("flex flex-col gap-2", "lg:flex-row lg:gap-10", {
@@ -38,15 +35,8 @@ const ProjectCard = ({ name, description, ...props }: IProjectCardProps) => {
       </div>
 
       <div className={cn("w-full py-4", "lg:w-1/2 ")}>
-        <Typography
-          variant={isMobile || isTablet ? "textXl" : "text3Xl"}
-          className={cn("mb-4", "lg:mb-4")}
-        >
-          {name}
-        </Typography>
-        <Typography variant="textBase" className={cn("mb-8", "lg:mb-8")}>
-          {description}
-        </Typography>
+        <h3 className={cn("mb-4", "lg:mb-4")}>{name}</h3>
+        <p className={cn("mb-8", "lg:mb-8")}>{description}</p>
 
         <div className={cn("flex items-center gap-4")}>
           <a href={props.github_url} target="_blank">

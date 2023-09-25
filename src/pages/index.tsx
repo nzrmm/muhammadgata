@@ -1,13 +1,10 @@
 import Head from "next/head";
 
-import { Button, Typography } from "@/components";
-import { useScreenDetector } from "@/hooks";
+import { Button } from "@/components";
 import { cn } from "@/utils";
 import { mediaSocials } from "@/data/media-socials";
 
 const Home = () => {
-  const { isMobile, isTablet } = useScreenDetector();
-
   return (
     <>
       <Head>
@@ -19,42 +16,39 @@ const Home = () => {
       </Head>
 
       <div className={cn("mb-20")}>
-        <Typography
-          variant={isMobile || isTablet ? "text4Xl" : "text5Xl"}
-          className={cn("mb-10", "lg:mb-16")}
-        >
+        <h1 className={cn("mb-10", "lg:mb-16")}>
           A Frontend and Mobile Developer with passion for creating beautiful
           user interfaces and satisfying user experiences.
-        </Typography>
+        </h1>
 
         <div className={cn("flex flex-col gap-6 mb-10", "lg:gap-8 lg:mb-16")}>
-          <Typography variant={isMobile || isTablet ? "textBase" : "textLg"}>
+          <h6>
             Hello 👋, i&apos;m Muhammad Gata. I was born in Malang East Java,
             but i spent time living in Mojokerto East Java. I have good skill in
             Frontend and Mobile Development. Now, i focused how to make
             beautiful user interfaces and satisfying user experiences to
             increase user enjoyment.
-          </Typography>
+          </h6>
 
-          <Typography variant={isMobile || isTablet ? "textBase" : "textLg"}>
+          <h6>
             I&apos;m proficient in Frontend Technologies including HTML, CSS,
             Javascript, and Typescript, focusing on modern framework such as
             React JS, Vue Js, and Next Js. Also, skilled in Mobile App
             Development using React Native and Flutter.
-          </Typography>
+          </h6>
 
-          <Typography variant={isMobile || isTablet ? "textBase" : "textLg"}>
+          <h6>
             Detail-oriented and committed to writing clean, well-maintained code
             according to best practices. Work well together in a work team with
             good problem solving and always looking to learn new skills.
-          </Typography>
+          </h6>
 
-          <Typography variant={isMobile || isTablet ? "textBase" : "textLg"}>
+          <h6>
             I choose Frontend and Mobile Development because i love to see
             beautiful design, smooth interactivity in website/app and about the
             right layout. For me, pouring design as code is the best healing for
             now 😇.
-          </Typography>
+          </h6>
         </div>
 
         <div

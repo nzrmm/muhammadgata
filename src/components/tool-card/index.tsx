@@ -1,4 +1,3 @@
-import { Typography } from "@/components";
 import { cn } from "@/utils";
 import { useScreenDetector } from "@/hooks";
 import { IToolType } from "@/types/tool";
@@ -29,13 +28,8 @@ const ToolCard = ({ name, description, icon, icon_color }: IToolsCardProps) => {
       </div>
 
       <div className={cn("flex-1 p-4", "lg:h-1/2 lg:p-5")}>
-        <Typography
-          variant="textBase"
-          className={cn("mb-2 font-bold", "lg:mb-2")}
-        >
-          {name}
-        </Typography>
-        <Typography variant="textSm">{description}</Typography>
+        <p className={cn("mb-2 font-bold", "lg:mb-2")}>{name}</p>
+        <span>{description}</span>
       </div>
     </div>
   );
