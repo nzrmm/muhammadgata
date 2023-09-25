@@ -1,15 +1,6 @@
-import Button from "@/components/button";
-import ToolCard from "@/components/tool-card";
-import NavbarItem from "@/components/navbar-item";
-import ProjectCard from "@/components/project-card";
-import DropdownMenu from "@/components/dropdown-menu";
-import ThemeSelector from "@/components/theme-selector";
-
-export {
-  Button,
-  ToolCard,
-  NavbarItem,
-  ProjectCard,
-  DropdownMenu,
-  ThemeSelector,
-};
+export { default as Button } from "@/components/button";
+export { default as ToolCard } from "@/components/tool-card";
+export { default as NavbarItem } from "@/components/navbar-item";
+export { default as ProjectCard } from "@/components/project-card";
+export { default as DropdownMenu } from "@/components/dropdown-menu";
+export { default as ThemeSelector } from "@/components/theme-selector";

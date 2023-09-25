@@ -1,4 +1,2 @@
-import Layout from "@/layouts/layout";
-import Header from "@/layouts/header";
-
-export { Layout, Header };
+export { default as Layout } from "@/layouts/layout";
+export { default as Header } from "@/layouts/header";
