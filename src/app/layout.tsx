@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 
 import { cn } from "@/utils";
 import { Header } from "@/components";
@@ -37,12 +38,17 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         spaceGrotesk.variable,
         inter.variable
       )}
+      suppressHydrationWarning
     >
       <body className={cn("antialiased")}>
-        <Header />
-        <main className={cn("mx-auto w-[88%] py-14", "lg:max-w-4xl lg:py-40")}>
-          {children}
-        </main>
+        <ThemeProvider enableSystem attribute="class" storageKey="app-theme">
+          <Header />
+          <main
+            className={cn("mx-auto w-[88%] py-14", "lg:max-w-4xl lg:py-40")}
+          >
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
