@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 
-import { ProjectCard } from "@/components";
+import { ProjectList } from "@/containers/products-page";
 import { cn } from "@/utils";
-import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Project - Muhammad Gata",
@@ -21,11 +20,7 @@ const ProjectsPage = () => {
         </h6>
       </div>
 
-      <div className={cn("grid gap-8", "lg:gap-16")}>
-        {projects.map((project, index) => (
-          <ProjectCard key={index} isReverse={index % 2 !== 0} {...project} />
-        ))}
-      </div>
+      <ProjectList />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import { cn } from "@/utils";
-import { Header } from "@/layouts";
+import { Header } from "@/components";
 import { spaceGrotesk, inter } from "@/constants/font";
 
 import "@/styles/globals.css";
