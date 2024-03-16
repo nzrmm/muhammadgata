@@ -1,3 +1,5 @@
+"use client";
+
 import { BiLoader } from "react-icons/bi";
 
 import { DropdownMenu } from "@/components";

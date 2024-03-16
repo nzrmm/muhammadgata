@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
 import { RxArrowTopRight } from "react-icons/rx";

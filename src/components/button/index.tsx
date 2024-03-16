@@ -1,3 +1,5 @@
+"use client";
+
 import { ComponentProps } from "react";
 import { cn } from "@/utils";
 import { cva, type VariantProps } from "class-variance-authority";

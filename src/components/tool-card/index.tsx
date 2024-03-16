@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/utils";
 import { useScreenDetector } from "@/hooks";
 import { IToolType } from "@/types/tool";

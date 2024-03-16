@@ -1,3 +1,5 @@
+"use client";
+
 import { NavbarItem, ThemeSelector } from "@/components";
 import { ROUTES } from "@/constants/route";
 import { cn } from "@/utils";

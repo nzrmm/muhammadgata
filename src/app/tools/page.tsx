@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
-import { ToolCard } from "@/components";
+// import { ToolCard } from "@/components";
 import { cn } from "@/utils";
-import { techStacks, appsAndServices } from "@/data/tools";
+// import { techStacks, appsAndServices } from "@/data/tools";
 
 export const metadata: Metadata = {
   title: "Tools - Muhammad Gata",
@@ -28,11 +28,11 @@ const ToolsPage = () => {
           </p>
         </div>
 
-        <div className={cn("grid gap-5", "lg:grid-cols-3")}>
+        {/* <div className={cn("grid gap-5", "lg:grid-cols-3")}>
           {techStacks.map((techStack, index) => (
             <ToolCard key={index} {...techStack} />
           ))}
-        </div>
+        </div> */}
       </div>
 
       <div>
@@ -44,11 +44,11 @@ const ToolsPage = () => {
           </p>
         </div>
 
-        <div className={cn("grid gap-5", "lg:grid-cols-3")}>
+        {/* <div className={cn("grid gap-5", "lg:grid-cols-3")}>
           {appsAndServices.map((appAndService, index) => (
             <ToolCard key={index} {...appAndService} />
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

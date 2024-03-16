@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 
-import { spaceGrotesk, inter } from "@/constants/font";
-import "@/styles/globals.css";
 import { cn } from "@/utils";
+import { Header } from "@/layouts";
+import { spaceGrotesk, inter } from "@/constants/font";
+
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Muhammad Gata - Personal Portfolio",
@@ -24,10 +26,6 @@ export const metadata: Metadata = {
     "nextjs",
     "personal website",
   ],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -40,7 +38,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         inter.variable
       )}
     >
-      <body>{children}</body>
+      <body className={cn("antialiased")}>
+        <Header />
+        <main className={cn("mx-auto w-[88%] py-14", "lg:max-w-4xl lg:py-40")}>
+          {children}
+        </main>
+      </body>
     </html>
   );
 };
