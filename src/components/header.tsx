@@ -1,10 +1,12 @@
+"use client";
+
 import { NavbarItem, ThemeSelector } from "@/components";
 import { ROUTES } from "@/constants/route";
 import { cn } from "@/utils";
 
 const Header = () => {
   return (
-    <div
+    <header
       className={cn(
         "fixed w-full bottom-0 border-t border-t-neutral-200 bg-white/60 backdrop-blur-xl z-50",
         "dark:bg-neutral-900/80 dark:border-t-neutral-800",
@@ -21,7 +23,7 @@ const Header = () => {
 
         <ThemeSelector />
       </nav>
-    </div>
+    </header>
   );
 };
 
