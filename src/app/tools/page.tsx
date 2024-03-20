@@ -1,10 +1,12 @@
 import { Metadata } from "next";
 
 import { TechStactList, AppAndServiceList } from "@/containers/tools-page";
+
 import { cn } from "@/utils";
+import { SITE_OWNER } from "@/constants/env";
 
 export const metadata: Metadata = {
-  title: "Tools - Muhammad Gata",
+  title: `Tools - ${SITE_OWNER}`,
   description: "a collection of tools that i use",
 };
 

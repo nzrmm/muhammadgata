@@ -1,20 +1,45 @@
 import { Metadata } from "next";
 
 import { Button } from "@/components";
+
 import { cn } from "@/utils";
+import {
+  SITE_URL,
+  SITE_ROLE,
+  SITE_OWNER,
+  TWITTER_ID,
+  TWITTER_USERNAME,
+} from "@/constants/env";
+import { DESCRIPTION } from "@/constants/seo";
 import { mediaSocials } from "@/data/media-socials";
 
 export const metadata: Metadata = {
-  title: "Muhammad Gata - Frontend and Mobile Engineer",
-  description:
-    "Hello, I am Muhammad Gata. I am a Frontend and Mobile Engineer with passion for creating beautiful user interfaces and satisfying user experiences.",
+  title: `${SITE_OWNER} - ${SITE_ROLE}`,
+  description: DESCRIPTION.home,
+  openGraph: {
+    title: SITE_OWNER,
+    description: DESCRIPTION.home,
+    url: SITE_URL,
+    type: "website",
+    images: [
+      { url: `${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=${SITE_ROLE}` },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_OWNER,
+    description: DESCRIPTION.home,
+    creator: TWITTER_USERNAME,
+    creatorId: TWITTER_ID,
+    images: [`${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=${SITE_ROLE}`],
+  },
 };
 
 const HomePage = () => {
   return (
     <div className={cn("mb-20")}>
       <h1 className={cn("mb-10", "lg:mb-16")}>
-        A Frontend and Mobile Developer with passion for creating beautiful user
+        A Software Engineer Frontend with passion for creating beautiful user
         interfaces and satisfying user experiences.
       </h1>
 

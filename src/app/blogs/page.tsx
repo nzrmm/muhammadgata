@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 
 import { cn } from "@/utils";
+import { SITE_OWNER } from "@/constants/env";
 
 export const metadata: Metadata = {
-  title: "Blogs - Muhammad Gata",
+  title: `Blogs - ${SITE_OWNER}`,
   description: "a collection of blogs that i write",
 };
 

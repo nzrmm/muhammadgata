@@ -1,32 +1,21 @@
 import { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 
-import { cn } from "@/utils";
 import { Header } from "@/components";
+
+import { cn } from "@/utils";
+import { SITE_URL, SITE_OWNER } from "@/constants/env";
+import { KEYWORDS } from "@/constants/seo";
 import { spaceGrotesk, inter } from "@/constants/font";
 
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Muhammad Gata - Personal Portfolio",
-  description: "Personal portfolio as a Frontend and Mobile Engineer",
-  authors: {
-    name: "Muhammad Gata",
+  authors: { name: SITE_OWNER, url: SITE_URL },
+  keywords: KEYWORDS,
+  icons: {
+    icon: "/images/favicon.png",
   },
-  keywords: [
-    "muhammad gata",
-    "muhammad",
-    "gata",
-    "frontend developer",
-    "frontend engineer",
-    "mobile developer",
-    "mobile engineer",
-    "software engineer",
-    "reactjs",
-    "vuejs",
-    "nextjs",
-    "personal website",
-  ],
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {

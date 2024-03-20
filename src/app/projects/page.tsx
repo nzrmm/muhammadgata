@@ -1,10 +1,12 @@
 import { Metadata } from "next";
 
 import { ProjectList } from "@/containers/products-page";
+
 import { cn } from "@/utils";
+import { SITE_OWNER } from "@/constants/env";
 
 export const metadata: Metadata = {
-  title: "Project - Muhammad Gata",
+  title: `Project - ${SITE_OWNER}`,
   description: "a collection of projects that i worked on",
 };
 
