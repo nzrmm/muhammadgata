@@ -29,19 +29,8 @@ export const GET = (req: Request) => {
       }
     );
   } catch (e) {
-    return Response.json("Failed to generate the image", {
+    return new Response("Failed to generate the image", {
       status: 500,
     });
   }
 };
-
-// <div tw="w-full h-full flex flex-col justify-between bg-neutral-900 text-white rounded-md px-14 py-20">
-//   <div>
-//     <h5 tw="text-3xl text-white/70">{subTitle}</h5>
-//     <h1 tw="text-7xl font-bold">{title}</h1>
-//   </div>
-
-//   <div>
-//     <h5 tw="text-xl">muhammadgata.vercel.app</h5>
-//   </div>
-// </div>
