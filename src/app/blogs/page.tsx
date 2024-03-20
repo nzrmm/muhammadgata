@@ -1,11 +1,36 @@
 import { Metadata } from "next";
 
 import { cn } from "@/utils";
-import { SITE_OWNER } from "@/constants/env";
+import {
+  SITE_URL,
+  SITE_OWNER,
+  TWITTER_ID,
+  TWITTER_USERNAME,
+} from "@/constants/env";
+import { DESCRIPTION } from "@/constants/seo";
 
 export const metadata: Metadata = {
   title: `Blogs - ${SITE_OWNER}`,
-  description: "a collection of blogs that i write",
+  description: DESCRIPTION.blog,
+  openGraph: {
+    title: SITE_OWNER,
+    description: DESCRIPTION.blog,
+    url: SITE_URL,
+    type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=Blogs`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_OWNER,
+    description: DESCRIPTION.blog,
+    creator: TWITTER_USERNAME,
+    creatorId: TWITTER_ID,
+    images: [`${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=Blogs`],
+  },
 };
 
 const BlogsPage = () => {

@@ -17,8 +17,8 @@ export const KEYWORDS: Metadata["keywords"] = [
 ];
 
 export const DESCRIPTION = {
-  home: "Hello, I am Muhammad Gata. I am a Frontend and Mobile Engineer with passion for creating beautiful user interfaces and satisfying user experiences.",
-  projects: "a collection of projects that i worked on",
-  tools: "a collection of tools that i use",
-  blogs: "a collection of blogs that i write",
+  home: "Hello, I am Muhammad Gata. I am Software Engineer Frontend with passion for creating beautiful user interfaces and satisfying user experiences.",
+  project: "a collection of projects that i worked on",
+  tool: "a collection of tools that i use",
+  blog: "a collection of blogs that i write",
 };

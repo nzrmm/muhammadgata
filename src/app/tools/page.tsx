@@ -3,11 +3,36 @@ import { Metadata } from "next";
 import { TechStactList, AppAndServiceList } from "@/containers/tools-page";
 
 import { cn } from "@/utils";
-import { SITE_OWNER } from "@/constants/env";
+import {
+  SITE_URL,
+  SITE_OWNER,
+  TWITTER_ID,
+  TWITTER_USERNAME,
+} from "@/constants/env";
+import { DESCRIPTION } from "@/constants/seo";
 
 export const metadata: Metadata = {
   title: `Tools - ${SITE_OWNER}`,
-  description: "a collection of tools that i use",
+  description: DESCRIPTION.tool,
+  openGraph: {
+    title: SITE_OWNER,
+    description: DESCRIPTION.tool,
+    url: SITE_URL,
+    type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=Tools`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_OWNER,
+    description: DESCRIPTION.tool,
+    creator: TWITTER_USERNAME,
+    creatorId: TWITTER_ID,
+    images: [`${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=Tools`],
+  },
 };
 
 const ToolsPage = () => {

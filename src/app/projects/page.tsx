@@ -3,11 +3,36 @@ import { Metadata } from "next";
 import { ProjectList } from "@/containers/products-page";
 
 import { cn } from "@/utils";
-import { SITE_OWNER } from "@/constants/env";
+import {
+  SITE_URL,
+  SITE_OWNER,
+  TWITTER_ID,
+  TWITTER_USERNAME,
+} from "@/constants/env";
+import { DESCRIPTION } from "@/constants/seo";
 
 export const metadata: Metadata = {
   title: `Project - ${SITE_OWNER}`,
-  description: "a collection of projects that i worked on",
+  description: DESCRIPTION.project,
+  openGraph: {
+    title: SITE_OWNER,
+    description: DESCRIPTION.project,
+    url: SITE_URL,
+    type: "website",
+    images: [
+      {
+        url: `${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=Projects`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_OWNER,
+    description: DESCRIPTION.project,
+    creator: TWITTER_USERNAME,
+    creatorId: TWITTER_ID,
+    images: [`${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=Projects`],
+  },
 };
 
 const ProjectsPage = () => {

@@ -22,7 +22,9 @@ export const metadata: Metadata = {
     url: SITE_URL,
     type: "website",
     images: [
-      { url: `${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=${SITE_ROLE}` },
+      {
+        url: `${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=Personal Portofolio`,
+      },
     ],
   },
   twitter: {
@@ -31,7 +33,9 @@ export const metadata: Metadata = {
     description: DESCRIPTION.home,
     creator: TWITTER_USERNAME,
     creatorId: TWITTER_ID,
-    images: [`${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=${SITE_ROLE}`],
+    images: [
+      `${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=Personal Portofolio`,
+    ],
   },
 };
 
