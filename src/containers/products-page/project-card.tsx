@@ -8,11 +8,11 @@ import { Button } from "@/components";
 import { Project } from "contentlayer/generated";
 import { cn } from "@/utils";
 
-type IProjectCardProps = {
+type Props = {
   isReverse?: boolean;
 } & Project;
 
-const ProjectCard = ({ title, description, ...props }: IProjectCardProps) => {
+const ProjectCard = ({ title, description, ...props }: Props) => {
   return (
     <div
       className={cn("flex flex-col gap-2", "lg:flex-row lg:gap-10", {

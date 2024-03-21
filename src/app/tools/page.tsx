@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { TechStactList, AppAndServiceList } from "@/containers/tools-page";
 
 import { cn } from "@/utils";
+import { allTools } from "contentlayer/generated";
 import {
   SITE_URL,
   SITE_OWNER,
@@ -36,6 +37,14 @@ export const metadata: Metadata = {
 };
 
 const ToolsPage = () => {
+  const allTechStacks = allTools.filter(
+    (item) => item.toolType === "tech-stack"
+  );
+
+  const allAppAndServices = allTools.filter(
+    (item) => item.toolType === "app-and-service"
+  );
+
   return (
     <div className={cn("mb-20")}>
       <div className={cn("mb-12", "lg:mb-14")}>
@@ -54,7 +63,7 @@ const ToolsPage = () => {
           </p>
         </div>
 
-        <TechStactList />
+        <TechStactList data={allTechStacks} />
       </div>
 
       <div>
@@ -66,7 +75,7 @@ const ToolsPage = () => {
           </p>
         </div>
 
-        <AppAndServiceList />
+        <AppAndServiceList data={allAppAndServices} />
       </div>
     </div>
   );

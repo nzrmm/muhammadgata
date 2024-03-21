@@ -1,15 +1,15 @@
 "use client";
 
+import Image from "next/image";
+
 import { cn } from "@/utils";
 import { useScreenDetector } from "@/hooks";
-import { IToolType } from "@/types/tool";
+import { Tool } from "contentlayer/generated";
 
-type IToolsCardProps = IToolType;
+type Props = Tool;
 
-const ToolCard = ({ name, description, icon, icon_color }: IToolsCardProps) => {
+const ToolCard = ({ title, description, icon, ...props }: Props) => {
   const { isDesktop } = useScreenDetector();
-
-  const Icon = icon;
 
   return (
     <div
@@ -26,11 +26,16 @@ const ToolCard = ({ name, description, icon, icon_color }: IToolsCardProps) => {
           "lg:w-full lg:h-1/2"
         )}
       >
-        <Icon color={icon_color} size={isDesktop ? 70 : 32} />
+        <Image
+          src={icon}
+          alt={`${props.slug}-image`}
+          width={isDesktop ? 70 : 32}
+          height={isDesktop ? 70 : 32}
+        />
       </div>
 
       <div className={cn("flex-1 p-4", "lg:h-1/2 lg:p-5")}>
-        <p className={cn("mb-2 font-bold", "lg:mb-2")}>{name}</p>
+        <p className={cn("mb-2 font-bold", "lg:mb-2")}>{title}</p>
         <span>{description}</span>
       </div>
     </div>

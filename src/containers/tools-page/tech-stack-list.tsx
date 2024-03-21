@@ -1,13 +1,17 @@
 "use client";
 
 import { ToolCard } from "@/containers/tools-page";
-import { techStacks } from "@/data/tools";
+import { Tool } from "contentlayer/generated";
 import { cn } from "@/utils";
 
-const TechStactList = () => {
+type Props = {
+  data: Tool[];
+};
+
+const TechStactList = ({ data }: Props) => {
   return (
     <div className={cn("grid gap-5", "lg:grid-cols-3")}>
-      {techStacks.map((item, index) => (
+      {data.map((item, index) => (
         <ToolCard key={index} {...item} />
       ))}
     </div>

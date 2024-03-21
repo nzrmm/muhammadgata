@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { ProjectList } from "@/containers/products-page";
 
 import { cn } from "@/utils";
+import { allProjects } from "contentlayer/generated";
 import {
   SITE_URL,
   SITE_OWNER,
@@ -47,7 +48,7 @@ const ProjectsPage = () => {
         </h6>
       </div>
 
-      <ProjectList />
+      <ProjectList data={allProjects} />
     </div>
   );
 };
