@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
-import { TechStactList, AppAndServiceList } from "@/containers/tools-page";
+import { TechStactList, AppAndServiceList } from "@/components/tools";
 
-import { cn } from "@/utils";
 import { allTools } from "contentlayer/generated";
+import { cn } from "@/utils";
 import {
   SITE_URL,
   SITE_OWNER,
@@ -37,11 +37,8 @@ export const metadata: Metadata = {
 };
 
 const ToolsPage = () => {
-  const allTechStacks = allTools.filter(
-    (item) => item.toolType === "tech-stack"
-  );
-
-  const allAppAndServices = allTools.filter(
+  const techStacks = allTools.filter((item) => item.toolType === "tech-stack");
+  const appAndServices = allTools.filter(
     (item) => item.toolType === "app-and-service"
   );
 
@@ -63,7 +60,7 @@ const ToolsPage = () => {
           </p>
         </div>
 
-        <TechStactList data={allTechStacks} />
+        <TechStactList data={techStacks} />
       </div>
 
       <div>
@@ -75,7 +72,7 @@ const ToolsPage = () => {
           </p>
         </div>
 
-        <AppAndServiceList data={allAppAndServices} />
+        <AppAndServiceList data={appAndServices} />
       </div>
     </div>
   );

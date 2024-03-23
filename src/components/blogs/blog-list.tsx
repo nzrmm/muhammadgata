@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { BlogCard } from "@/components/blog";
+import { BlogCard } from "@/components/blogs";
 
 import { Blog } from "contentlayer/generated";
 

@@ -1,6 +1,7 @@
 "use client";
 
-import { ProjectCard } from "@/containers/products-page";
+import { ProjectCard } from "@/components/projects";
+
 import { Project } from "contentlayer/generated";
 import { cn } from "@/utils";
 

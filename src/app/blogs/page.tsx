@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { BlogList } from "@/components/blog";
+import { BlogList } from "@/components/blogs";
 
 import { allBlogs } from "contentlayer/generated";
 import { cn } from "@/utils";

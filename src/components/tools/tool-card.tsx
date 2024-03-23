@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 
+import { Tool } from "contentlayer/generated";
 import { cn } from "@/utils";
 import { useScreenDetector } from "@/hooks";
-import { Tool } from "contentlayer/generated";
 
 type Props = Tool;
 

@@ -5,12 +5,11 @@ import { BsGithub } from "react-icons/bs";
 import { RxArrowTopRight } from "react-icons/rx";
 
 import { Button } from "@/components";
+
 import { Project } from "contentlayer/generated";
 import { cn } from "@/utils";
 
-type Props = {
-  isReverse?: boolean;
-} & Project;
+type Props = { isReverse?: boolean } & Project;
 
 const ProjectCard = ({ title, description, ...props }: Props) => {
   return (

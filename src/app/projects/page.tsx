@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
-import { ProjectList } from "@/containers/products-page";
+import { ProjectList } from "@/components/projects";
 
-import { cn } from "@/utils";
 import { allProjects } from "contentlayer/generated";
+import { cn } from "@/utils";
 import {
   SITE_URL,
   SITE_OWNER,
@@ -13,7 +13,7 @@ import {
 import { DESCRIPTION } from "@/constants/seo";
 
 export const metadata: Metadata = {
-  title: `Project - ${SITE_OWNER}`,
+  title: `Projects - ${SITE_OWNER}`,
   description: DESCRIPTION.project,
   openGraph: {
     title: SITE_OWNER,
@@ -37,6 +37,8 @@ export const metadata: Metadata = {
 };
 
 const ProjectsPage = () => {
+  const projects = allProjects;
+
   return (
     <div className={cn("mb-20")}>
       <div className={cn("mb-12", "lg:mb-14")}>
@@ -48,7 +50,7 @@ const ProjectsPage = () => {
         </h6>
       </div>
 
-      <ProjectList data={allProjects} />
+      <ProjectList data={projects} />
     </div>
   );
 };

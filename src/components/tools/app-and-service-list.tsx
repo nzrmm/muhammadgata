@@ -1,6 +1,7 @@
 "use client";
 
-import { ToolCard } from "@/containers/tools-page";
+import { ToolCard } from "@/components/tools";
+
 import { Tool } from "contentlayer/generated";
 import { cn } from "@/utils";
 
