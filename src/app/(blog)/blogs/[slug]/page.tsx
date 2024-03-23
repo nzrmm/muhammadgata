@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { format, parseISO } from "date-fns";
 
-import { Badge, MDXComponent } from "@/components";
+import { MDXComponent } from "@/components";
+import { BlogCard } from "@/components/blogs";
 
 import { allBlogs } from "contentlayer/generated";
 import { cn } from "@/utils";
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: blog.title,
       description: blog.description,
       url: SITE_URL,
-      type: "website",
+      type: "article",
       images: [
         {
           url: `${SITE_URL}/api/og?title=${blog.title}&subTitle=Blog`,
@@ -65,18 +65,7 @@ export const BlogPage = ({ params }: Props) => {
 
   return (
     <div className={cn("mb-20")}>
-      <div className={cn("mb-12")}>
-        <h1 className={cn("mb-4")}>{blog.title}</h1>
-        <time dateTime={blog.publishedAt} className="text-sm px-2">
-          Posted on {format(parseISO(blog.publishedAt), "LLLL d, yyyy")}
-        </time>
-        <div className={cn("flex items-center gap-2")}>
-          {blog.tags.map((tag, index) => (
-            <Badge key={index}>#{tag}</Badge>
-          ))}
-        </div>
-      </div>
-
+      <BlogCard classname={cn("mb-12")} {...blog} />
       <MDXComponent code={blog.body.code} />
     </div>
   );

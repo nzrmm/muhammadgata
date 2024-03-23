@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-
 import { BlogCard } from "@/components/blogs";
 
 import { Blog } from "contentlayer/generated";
@@ -14,9 +12,7 @@ const BlogList = ({ data }: Props) => {
   return (
     <div>
       {data.map((blog, index) => (
-        <Link key={index} href={`/blogs/${blog.slug}`}>
-          <BlogCard {...blog} />
-        </Link>
+        <BlogCard key={index} isLinkedHeading isWithDescription {...blog} />
       ))}
     </div>
   );

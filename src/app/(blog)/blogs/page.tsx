@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: SITE_OWNER,
     description: DESCRIPTION.blog,
     url: SITE_URL,
-    type: "website",
+    type: "article",
     images: [
       {
         url: `${SITE_URL}/api/og?title=${SITE_OWNER}&subTitle=Blogs`,

@@ -21,4 +21,5 @@ export const DESCRIPTION = {
   project: "a collection of projects that i worked on",
   tool: "a collection of tools that i use",
   blog: "a collection of blogs that i write",
+  tag: "a collection of posts by tag",
 };

@@ -1,7 +1,8 @@
 "use client";
 
 import { NavbarItem, ThemeSelector } from "@/components";
-import { ROUTES } from "@/constants/route";
+
+import { NAVBAR_ROUTES } from "@/constants/route";
 import { cn } from "@/utils";
 
 const Header = () => {
@@ -16,8 +17,8 @@ const Header = () => {
     >
       <nav className={cn("flex justify-between items-center h-16 px-6")}>
         <div className={cn("flex items-center gap-4 lg:gap-1")}>
-          {ROUTES.map((item, index) => (
-            <NavbarItem key={index} href={item.href} name={item.name} />
+          {NAVBAR_ROUTES.map((navbarRoute, index) => (
+            <NavbarItem key={index} {...navbarRoute} />
           ))}
         </div>
 
