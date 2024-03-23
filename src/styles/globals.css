@@ -12,7 +12,14 @@
   }
   :is(h6) {
     @apply text-neutral-700 dark:text-neutral-400;
-    @apply !leading-loose !tracking-wider;
+    @apply !leading-loose;
+  }
+  :is(p, span, time) {
+    @apply text-neutral-700 dark:text-neutral-400;
+    @apply leading-relaxed;
+  }
+  :is(span, time) {
+    @apply text-sm;
   }
   h1 {
     @apply text-3xl md:text-4xl lg:text-5xl;
@@ -31,13 +38,5 @@
   }
   h6 {
     @apply lg:text-lg;
-  }
-  p {
-    @apply text-neutral-700 dark:text-neutral-400;
-    @apply leading-loose tracking-wider;
-  }
-  span {
-    @apply text-neutral-700 dark:text-neutral-400;
-    @apply text-sm leading-relaxed tracking-wider;
   }
 }

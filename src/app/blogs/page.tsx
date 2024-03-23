@@ -1,5 +1,8 @@
 import { Metadata } from "next";
 
+import { BlogList } from "@/components/blog";
+
+import { allBlogs } from "contentlayer/generated";
 import { cn } from "@/utils";
 import {
   SITE_URL,
@@ -34,6 +37,8 @@ export const metadata: Metadata = {
 };
 
 const BlogsPage = () => {
+  const blogs = allBlogs.filter((item) => item.isPublised);
+
   return (
     <div className={cn("mb-20")}>
       <div className={cn("mb-12", "lg:mb-14")}>
@@ -44,6 +49,8 @@ const BlogsPage = () => {
           Feel free to reads.
         </h6>
       </div>
+
+      <BlogList data={blogs} />
     </div>
   );
 };
