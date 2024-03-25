@@ -15,19 +15,25 @@ type Props = {
   classname?: ClassValue;
 } & Blog;
 
-const BlogCard = ({ title, description, slug, tags, ...props }: Props) => {
+const BlogCard = ({
+  title,
+  description,
+  isLinkedHeading = false,
+  isWithDescription = false,
+  ...props
+}: Props) => {
   return (
     <div className={cn(props.classname)}>
       <div className={cn("mb-4")}>
-        {props.isLinkedHeading ? (
-          <Link href={`/blogs/${slug}`}>
+        {isLinkedHeading ? (
+          <Link href={`/blogs/${props.slug}`}>
             <h3 className={cn("mb-2")}>{title}</h3>
           </Link>
         ) : (
           <h1 className={cn("mb-2")}>{title}</h1>
         )}
 
-        {props.isWithDescription && <p>{description}</p>}
+        {isWithDescription && <p>{description}</p>}
       </div>
 
       <div>
@@ -35,7 +41,7 @@ const BlogCard = ({ title, description, slug, tags, ...props }: Props) => {
           Posted on {format(parseISO(props.publishedAt), "LLLL d, yyyy")}
         </time>
         <div className={cn("flex items-center gap-2")}>
-          {tags.map((tag, index) => (
+          {props.tags.map((tag, index) => (
             <Link key={index} href={`/tag?tag=${tag}`}>
               <Badge>#{tag}</Badge>
             </Link>
@@ -44,11 +50,6 @@ const BlogCard = ({ title, description, slug, tags, ...props }: Props) => {
       </div>
     </div>
   );
-};
-
-BlogCard.defaultProps = {
-  isLinkedHeading: false,
-  isWithDescription: false,
 };
 
 export default BlogCard;
