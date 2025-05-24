@@ -43,7 +43,7 @@ const ThemeSelector = () => {
             {({ active }) => (
               <button
                 className={cn(
-                  "group flex w-full items-center rounded-md px-2 py-2 text-sm",
+                  "group flex w-full items-center rounded-md px-4 py-2 text-sm",
                   { "bg-neutral-100 dark:bg-neutral-800": active }
                 )}
               >

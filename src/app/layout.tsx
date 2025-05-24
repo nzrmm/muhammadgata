@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
+import { getLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
 import { Header } from "@/components";
 
@@ -18,10 +20,12 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+const RootLayout = async ({ children }: { children: React.ReactNode }) => {
+  const locale = await getLocale();
+
   return (
     <html
-      lang="en"
+      lang={locale}
       className={cn(
         spaceGrotesk.className,
         spaceGrotesk.variable,
@@ -30,14 +34,16 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       suppressHydrationWarning
     >
       <body className={cn("antialiased")}>
-        <ThemeProvider enableSystem attribute="class" storageKey="app-theme">
-          <Header />
-          <main
-            className={cn("mx-auto w-[88%] py-14", "lg:max-w-4xl lg:py-40")}
-          >
-            {children}
-          </main>
-        </ThemeProvider>
+        <NextIntlClientProvider>
+          <ThemeProvider enableSystem attribute="class" storageKey="app-theme">
+            <Header />
+            <main
+              className={cn("mx-auto w-[88%] py-14", "lg:max-w-4xl lg:py-40")}
+            >
+              {children}
+            </main>
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

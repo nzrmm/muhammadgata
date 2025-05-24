@@ -1,6 +1,6 @@
 "use client";
 
-import { NavbarItem, ThemeSelector } from "@/components";
+import { NavbarItem, ThemeSelector, LocaleSelector } from "@/components";
 
 import { NAVBAR_ROUTES } from "@/constants/route";
 import { cn } from "@/utils";
@@ -22,7 +22,10 @@ const Header = () => {
           ))}
         </div>
 
-        <ThemeSelector />
+        <div className={cn("flex gap-4")}>
+          <LocaleSelector />
+          <ThemeSelector />
+        </div>
       </nav>
     </header>
   );

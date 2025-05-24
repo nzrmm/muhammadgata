@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { useTranslations } from "next-intl";
 import { BsGithub, BsLinkedin, BsFacebook, BsInstagram } from "react-icons/bs";
 
 import { Button } from "@/components";
@@ -64,12 +65,11 @@ export const metadata: Metadata = {
 };
 
 const HomePage = () => {
+  const t = useTranslations("HomePage");
+
   return (
     <div className={cn("mb-20")}>
-      <h1 className={cn("mb-10", "lg:mb-16")}>
-        A Software Engineer Frontend with passion for creating beautiful user
-        interfaces and satisfying user experiences.
-      </h1>
+      <h1 className={cn("mb-10", "lg:mb-16")}>{t("title")}</h1>
 
       <div className={cn("flex flex-col gap-6 mb-10", "lg:gap-8 lg:mb-16")}>
         <h6>
