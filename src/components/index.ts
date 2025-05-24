@@ -5,3 +5,4 @@ export { default as NavbarItem } from "@/components/navbar-item";
 export { default as DropdownMenu } from "@/components/dropdown-menu";
 export { default as MDXComponent } from "@/components/mdx-component";
 export { default as ThemeSelector } from "@/components/theme-selector";
+export { default as LocaleSelector } from "@/components/locale-selector";

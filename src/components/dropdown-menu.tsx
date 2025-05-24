@@ -36,7 +36,7 @@ const DropdownMenu = ({ buttonTitle, ...props }: IDropdownMenuProps) => {
       >
         <Menu.Items
           className={cn(
-            "absolute right-0 shadow-lg rounded-md divide-y w-40 bottom-full bg-white divide-neutral-200 mt-2",
+            "absolute right-0 shadow-lg rounded-md divide-y bottom-full bg-white divide-neutral-200 mt-2",
             "dark:bg-neutral-900 dark:divide-neutral-800",
             "lg:bottom-auto"
           )}
